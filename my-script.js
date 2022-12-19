@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
     const n = 5;
 
     for (let i = 1; i <= n; i++) {
@@ -12,33 +15,49 @@
     console.log(getComputerChoice);
 
    if (playerSelection === "rock" && getComputerChoice === "Paper" ) {
+    ++computerScore;
     console.log("You lost");
    }
    else if (playerSelection === "rock" && getComputerChoice === "Rock") {
+    ++computerScore;
+    ++playerScore;
     console.log("Draw");
    } 
    else if (playerSelection === "rock" && getComputerChoice === "Scissors") {
+    ++playerScore;
     console.log("You won");
    } 
    else if (playerSelection === "paper" && getComputerChoice === "Rock") {
+    ++playerScore;
     console.log("You won");
    } 
    else if (playerSelection === "paper" && getComputerChoice === "Scissors") {
+    ++computerScore;
     console.log("You lost");
    }
    else if (playerSelection === "paper" && getComputerChoice === "Paper") {
+    ++playerScore;
+    ++computerScore;
     console.log("Draw");
    }
    else if (playerSelection === "scissors" && getComputerChoice === "Paper") {
+    ++computerScore;
     console.log("You lost");
    } 
    else if (playerSelection === "scissors" && getComputerChoice === "Rock") {
+    ++playerScore;
     console.log("You won");
    } 
    else if (playerSelection === "scissors" && getComputerChoice === "Scissors") {
+    ++computerScore;
+    ++playerScore;
     console.log("Draw");
    }
    else {
     console.log("Patanahi");
   }
     }
+
+    console.log(playerScore);
+    console.log(computerScore);
+    

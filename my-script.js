@@ -60,4 +60,17 @@ let computerScore = 0;
 
     console.log(playerScore);
     console.log(computerScore);
+
+    if (computerScore < playerScore) {
+      console.log ("You win");
+    }
+    else if (computerScore = playerScore) {
+      console.log ("its a draw");
+    }
+    else if(computerScore > playerScore) {
+      console.log ("You loss");
+    }
+    else {
+      console.log ("Error")
+    }
     

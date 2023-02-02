@@ -1,76 +1,82 @@
-let playerScore = 0;
-let computerScore = 0;
+// let playerScore = 0;
+// let computerScore = 0;
 
-    const n = 5;
+    const playerSelection = document.querySelectorAll('button');
 
-    for (let i = 1; i <= n; i++) {
-    
-    let playerSelection =  prompt("Please enter Rock, Paper or  Scissors as your choice").toLowerCase();
-    console.log (playerSelection);
+// we use the .forEach method to iterate through each button
+playerSelection.forEach((button) => {
 
- 
-    let green = ["Rock", "Paper", "Scissors"];
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    let playerSelection = (button.id);
+    let green = ["Rock", "Paper", "Scissor"];
     let getComputerChoice = green[Math.floor(Math.random()*green.length)];
    
-    console.log(getComputerChoice);
+    document.getElementById("PlayerSelect").innerHTML = playerSelection;
+    document.getElementById("ComputerSelect").innerHTML = getComputerChoice;
 
-   if (playerSelection === "rock" && getComputerChoice === "Paper" ) {
-    ++computerScore;
-    console.log("You lost");
+   if (playerSelection === "Rock" && getComputerChoice === "Paper" ) {
+    //++computerScore;
+    document.getElementById("ResultBox").innerHTML = ("You Lose! Paper beats Rock");
    }
-   else if (playerSelection === "rock" && getComputerChoice === "Rock") {
-    ++computerScore;
-    ++playerScore;
-    console.log("Draw");
+   else if (playerSelection === "Rock" && getComputerChoice === "Rock") {
+    // ++computerScore;
+    // ++playerScore;
+    document.getElementById("ResultBox").innerHTML =("It's a Draw");
    } 
-   else if (playerSelection === "rock" && getComputerChoice === "Scissors") {
-    ++playerScore;
-    console.log("You won");
+   else if (playerSelection === "Rock" && getComputerChoice === "Scissor") {
+    //++playerScore;
+    document.getElementById("ResultBox").innerHTML = ("You Won! Rock beats Scissor");
    } 
-   else if (playerSelection === "paper" && getComputerChoice === "Rock") {
-    ++playerScore;
-    console.log("You won");
+   else if (playerSelection === "Paper" && getComputerChoice === "Rock") {
+    //++playerScore;
+    document.getElementById("ResultBox").innerHTML = ("You Won! Paper beats Rock");
    } 
-   else if (playerSelection === "paper" && getComputerChoice === "Scissors") {
-    ++computerScore;
-    console.log("You lost");
+   else if (playerSelection === "Paper" && getComputerChoice === "Scissor") {
+    //++computerScore;
+    document.getElementById("ResultBox").innerHTML = ("You Lose! Scissor beats Paper");
    }
-   else if (playerSelection === "paper" && getComputerChoice === "Paper") {
-    ++playerScore;
-    ++computerScore;
-    console.log("Draw");
+   else if (playerSelection === "Paper" && getComputerChoice === "Paper") {
+    // ++playerScore;
+    // ++computerScore;
+    document.getElementById("ResultBox").innerHTML = ("It's a Draw");
    }
-   else if (playerSelection === "scissors" && getComputerChoice === "Paper") {
-    ++computerScore;
-    console.log("You lost");
+   else if (playerSelection === "Scissor" && getComputerChoice === "Paper") {
+    //++playerScore;
+    document.getElementById("ResultBox").innerHTML = ("You Won! Scissor beats Paper");
    } 
-   else if (playerSelection === "scissors" && getComputerChoice === "Rock") {
-    ++playerScore;
-    console.log("You won");
+   else if (playerSelection === "Scissor" && getComputerChoice === "Rock") {
+    //++computerScore;
+    document.getElementById("ResultBox").innerHTML = ("You Lose! Rock beats Scissor");
    } 
-   else if (playerSelection === "scissors" && getComputerChoice === "Scissors") {
-    ++computerScore;
-    ++playerScore;
-    console.log("Draw");
+   else if (playerSelection === "Scissor" && getComputerChoice === "Scissor") {
+    // ++computerScore;
+    // ++playerScore;
+    document.getElementById("ResultBox").innerHTML = ("It's a Draw");
    }
    else {
     console.log("Patanahi");
   }
-    }
+  });
+});
 
-    console.log(playerScore);
-    console.log(computerScore);
+ 
+   
+    
 
-    if (computerScore < playerScore) {
-      console.log ("You win");
-    }
-    else if (computerScore = playerScore) {
-      console.log ("its a draw");
-    }
-    else if(computerScore > playerScore) {
-      console.log ("You loss");
-    }
-    else {
-      console.log ("Error")
-    }
+    // console.log(playerScore);
+    // console.log(computerScore);
+
+    // if (computerScore < playerScore) {
+    //   console.log ("You win");
+    // }
+    // else if (computerScore = playerScore) {
+    //   console.log ("its a draw");
+    // }
+    // else if(computerScore > playerScore) {
+    //   console.log ("You loss");
+    // }
+    // else {
+    //   console.log ("Error")
+    // }
     

@@ -1,0 +1,76 @@
+body, html {
+    display: flex;
+    font-size: 10px;
+    background-image: url('image/rock-paper-scissor.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 20px;
+    /* position: relative; */
+  
+  }
+.box {
+  /* position: absolute;
+  top: 25%; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 30%;
+}
+
+button{
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+  font-size: x-large;
+  font-weight: bold;
+}
+#ResultBox {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#PlayerBox {
+  display: flex;
+  flex-direction: column; 
+  box-sizing: border-box;
+  width: 25%;
+  height: 75%;
+}
+#PlayerSelect {
+  display: flex;
+  box-sizing: border-box;
+  border-color: black;
+  width: auto;
+  padding-top: 10px;
+  height: 25%;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+#ComputerBox {
+  display: flex;
+  flex-direction: column; 
+  box-sizing: border-box;
+  width: 25%;
+  height: 75%;
+}
+
+#ComputerSelect {
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 10px;
+  width: auto;
+  height: 25%;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+#ResultBox {
+  height: 20%;
+}

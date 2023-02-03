@@ -8,12 +8,18 @@ playerSelection.forEach((button) => {
 
 // and for each one we add a 'click' listener
 button.addEventListener('click', () => {
+
+  if (playerScore >= 5 || computerScore >= 5) {
+    return;
+  }
+
   let playerSelection = (button.id);
   let green = ["Rock", "Paper", "Scissor"];
   let getComputerChoice = green[Math.floor(Math.random()*green.length)];
    
   document.getElementById("PlayerSelect").innerHTML = playerSelection;
   document.getElementById("ComputerSelect").innerHTML = getComputerChoice;
+
 
     if (playerSelection === "Rock" && getComputerChoice === "Paper" ) {
       ++computerScore;
@@ -44,7 +50,7 @@ button.addEventListener('click', () => {
      }
   document.getElementById("PlayerScore").innerHTML = (playerScore)
   document.getElementById("ComputerScore").innerHTML =(computerScore)
-  
+
   });
 });
     

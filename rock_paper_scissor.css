@@ -11,8 +11,26 @@ body, html {
     align-items: center;
     padding-top: 20px;
     /* position: relative; */
-  
   }
+
+  h1 {
+    font-size: xx-large;
+  }
+
+  h2 {
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  .BoxTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 15%;
+  }
+
 .box {
   /* position: absolute;
   top: 25%; */
@@ -48,7 +66,18 @@ button{
   border-color: black;
   width: auto;
   padding-top: 10px;
-  height: 25%;
+  height: 15%;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+#PlayerScore {
+  display: flex;
+  box-sizing: border-box;
+  border-color: black;
+  width: auto;
+  padding-top: 10px;
+  height: 15%;
   font-size: x-large;
   font-weight: bolder;
 }
@@ -59,6 +88,17 @@ button{
   box-sizing: border-box;
   width: 25%;
   height: 75%;
+}
+
+#ComputerScore {
+  display: flex;
+  box-sizing: border-box;
+  border-color: black;
+  width: auto;
+  padding-top: 10px;
+  height: 15%;
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 #ComputerSelect {

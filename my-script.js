@@ -48,9 +48,16 @@ button.addEventListener('click', () => {
     else {
        document.getElementById("ResultBox").innerHTML = ("It's a Draw");
      }
-  document.getElementById("PlayerScore").innerHTML = (playerScore)
-  document.getElementById("ComputerScore").innerHTML =(computerScore)
+  document.getElementById("PlayerScore").innerHTML = (playerScore);
+  document.getElementById("ComputerScore").innerHTML =(computerScore);
+  
+
+  if (playerScore >= 5) {
+   document.getElementById("FinalResult").innerHTML = ("Game Over! You Win");
+  }
+  else if (computerScore >= 5) {
+   document.getElementById("FinalResult").innerHTML = ("Game Over! You Lose");
+  }
 
   });
 });
-    

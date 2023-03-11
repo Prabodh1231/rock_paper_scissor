@@ -1,7 +1,7 @@
 body, html {
     display: flex;
     font-size: 10px;
-    background-image: url('image/rock-paper-scissor.jpg');
+    background-color: rgb(211, 177, 225);
     background-size: cover;
     height: 100%;
     width: 100%;
